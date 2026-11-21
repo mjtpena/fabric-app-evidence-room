@@ -1,0 +1,336 @@
+@import 'tailwindcss';
+@import '@x10/shared/styles.css';
+@source "../../../shared/src";
+
+/* ------------------------------------------------------------------ the room (both themes) */
+
+:root {
+  /* Oak in daylight. */
+  --wood-1: #d2a46c;
+  --wood-2: #b37d48;
+  --wood-3: #845630;
+  --wood-4: #5e3b1f;
+  --wood-edge: #ebc690;
+  --wood-grain: rgb(92 52 18 / 0.2);
+  --wood-ink: #3a2412;
+  --wood-ink-muted: rgb(58 36 18 / 0.72);
+  --recess: #24170d;
+  --recess-2: #3b2716;
+  --tray-floor: #8a5d36;
+  --tray-floor-2: #6d4626;
+  --brass-1: #f6e3a4;
+  --brass-2: #d1aa52;
+  --brass-3: #8e6b25;
+  --brass-ink: #3b2b0c;
+  --groove: #2c1c0f;
+  --paper: #fdf9ee;
+  --paper-2: #f1e8d3;
+  --paper-edge: rgb(110 84 40 / 0.35);
+  --paper-rule: rgb(70 120 200 / 0.22);
+  --paper-red: rgb(206 70 60 / 0.55);
+  --paper-ink: #2b2620;
+  --paper-ink-muted: #6b6152;
+  --stamp-ink: #2f6a36;
+  --tab-red: #c9372c;
+  --clip-1: #f2f5f8;
+  --clip-2: #8d98a5;
+  --room-wall: #f2ece0;
+  --room-wall-2: #e9e0cf;
+  --room-panel: rgb(120 90 50 / 0.07);
+  --room-floor: #d9cbb2;
+  --room-floor-2: #cbb995;
+  --room-light: rgb(255 236 190 / 0.85);
+  --room-shadow: rgb(60 36 12 / 0.28);
+  --scrim: rgb(40 26 12 / 0.5);
+  /* Lens colours for card tops. */
+  --lens-open: var(--gray-9);
+  --lens-in_progress: var(--blue-9);
+  --lens-query: var(--amber-9);
+  --lens-submitted: var(--violet-9);
+  --lens-accepted: var(--green-9);
+  --lens-withdrawn: var(--gray-6);
+  --lens-not_due: var(--teal-9);
+  --lens-late_1_7: var(--amber-9);
+  --lens-late_8_14: var(--orange-9);
+  --lens-late_15: var(--red-9);
+  --lens-settled: var(--gray-5);
+  --lens-high: var(--magenta-9);
+  --lens-normal: var(--slate-8);
+  --lens-c0: var(--indigo-9);
+  --lens-c1: var(--teal-9);
+  --lens-c2: var(--coral-9);
+  --lens-c3: var(--plum-9);
+  --lens-c4: var(--blue-9);
+  --lens-c5: var(--amber-9);
+  --lens-c6: var(--jade-9);
+  --lens-c7: var(--cyan-9);
+  --lens-none: var(--gray-6);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --wood-1: #6e4b2c;
+    --wood-2: #573820;
+    --wood-3: #3c2515;
+    --wood-4: #26170c;
+    --wood-edge: #8f6a42;
+    --wood-grain: rgb(0 0 0 / 0.28);
+    --wood-ink: #f3e3c4;
+    --wood-ink-muted: rgb(243 227 196 / 0.7);
+    --recess: #0d0805;
+    --recess-2: #1d130b;
+    --tray-floor: #4a3019;
+    --tray-floor-2: #33200f;
+    --brass-1: #f0d68a;
+    --brass-2: #b88e3c;
+    --brass-3: #6e5016;
+    --groove: #120b05;
+    --paper: #ebe2cc;
+    --paper-2: #d8ccb0;
+    --paper-ink: #231d14;
+    --paper-ink-muted: #5c5243;
+    --stamp-ink: #2c6233;
+    --room-wall: #191612;
+    --room-wall-2: #120f0c;
+    --room-panel: rgb(255 230 190 / 0.035);
+    --room-floor: #211b14;
+    --room-floor-2: #17130e;
+    --room-light: rgb(255 200 120 / 0.2);
+    --room-shadow: rgb(0 0 0 / 0.6);
+    --scrim: rgb(5 3 1 / 0.55);
+  }
+}
+
+:root[data-theme='dark'] {
+  --wood-1: #6e4b2c;
+  --wood-2: #573820;
+  --wood-3: #3c2515;
+  --wood-4: #26170c;
+  --wood-edge: #8f6a42;
+  --wood-grain: rgb(0 0 0 / 0.28);
+  --wood-ink: #f3e3c4;
+  --wood-ink-muted: rgb(243 227 196 / 0.7);
+  --recess: #0d0805;
+  --recess-2: #1d130b;
+  --tray-floor: #4a3019;
+  --tray-floor-2: #33200f;
+  --brass-1: #f0d68a;
+  --brass-2: #b88e3c;
+  --brass-3: #6e5016;
+  --groove: #120b05;
+  --paper: #ebe2cc;
+  --paper-2: #d8ccb0;
+  --paper-ink: #231d14;
+  --paper-ink-muted: #5c5243;
+  --stamp-ink: #2c6233;
+  --room-wall: #191612;
+  --room-wall-2: #120f0c;
+  --room-panel: rgb(255 230 190 / 0.035);
+  --room-floor: #211b14;
+  --room-floor-2: #17130e;
+  --room-light: rgb(255 200 120 / 0.2);
+  --room-shadow: rgb(0 0 0 / 0.6);
+  --scrim: rgb(5 3 1 / 0.55);
+}
+
+/* ------------------------------------------------------------------ catalogue motion */
+
+.er-drawer {
+  cursor: pointer;
+  outline: none;
+}
+.er-drawer .er-pull-out {
+  transition: transform 200ms cubic-bezier(0.2, 0, 0, 1);
+}
+.er-drawer:hover .er-pull-out,
+.er-drawer:focus-visible .er-pull-out {
+  transform: translateY(3px);
+}
+.er-drawer .er-focus {
+  opacity: 0;
+  transition: opacity 120ms;
+}
+.er-drawer:focus-visible .er-focus {
+  opacity: 1;
+}
+.er-tab {
+  transition:
+    transform 260ms cubic-bezier(0.2, 0, 0, 1),
+    opacity 200ms;
+}
+.er-drawer:hover .er-tab {
+  transform: translateY(-2px);
+}
+.er-band {
+  transition: fill 380ms cubic-bezier(0.2, 0, 0, 1);
+}
+.er-strip-fill {
+  transition: width 900ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+.er-tray {
+  transform-origin: 0 0;
+  transition:
+    transform 520ms cubic-bezier(0.2, 0, 0, 1),
+    opacity 260ms cubic-bezier(0.2, 0, 0, 1);
+}
+.er-scrim {
+  transition: opacity 360ms cubic-bezier(0.2, 0, 0, 1);
+}
+.er-card {
+  cursor: pointer;
+  outline: none;
+}
+.er-card .er-card-rise {
+  transition:
+    transform 340ms cubic-bezier(0.2, 0, 0, 1),
+    opacity 260ms cubic-bezier(0.2, 0, 0, 1);
+}
+.er-card .er-card-lift {
+  transition: transform 420ms cubic-bezier(0.2, 0, 0, 1);
+}
+.er-card:hover .er-card-hover {
+  transform: translateY(-6px);
+}
+.er-card .er-card-hover {
+  transition: transform 180ms cubic-bezier(0.2, 0, 0, 1);
+}
+.er-card .er-focus {
+  opacity: 0;
+  transition: opacity 120ms;
+}
+.er-card:focus-visible .er-focus {
+  opacity: 1;
+}
+.er-stamp-in {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: er-stamp 620ms cubic-bezier(0.3, 0, 0.1, 1) both;
+}
+.er-clip-in {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: er-clip 520ms cubic-bezier(0.2, 0, 0, 1) both;
+}
+.er-lamp {
+  animation: er-breathe 10s ease-in-out infinite;
+}
+
+@keyframes er-stamp {
+  0% {
+    transform: scale(1.8) rotate(-14deg);
+    opacity: 0;
+  }
+  55% {
+    transform: scale(0.92) rotate(-8deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(-8deg);
+  }
+}
+@keyframes er-clip {
+  0% {
+    transform: translateY(-16px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes er-breathe {
+  0%,
+  100% {
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .er-drawer .er-pull-out,
+  .er-tab,
+  .er-band,
+  .er-strip-fill,
+  .er-tray,
+  .er-scrim,
+  .er-card .er-card-rise,
+  .er-card .er-card-lift,
+  .er-card .er-card-hover {
+    transition: none;
+  }
+  .er-stamp-in,
+  .er-clip-in,
+  .er-lamp {
+    animation: none;
+  }
+}
+
+/* ------------------------------------------------------------------ paper (request card on the reading desk, slip) */
+
+.er-paper {
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(var(--paper-red), var(--paper-red)),
+    repeating-linear-gradient(to bottom, transparent 0 23px, var(--paper-rule) 23px 24px);
+  background-size:
+    100% 1.5px,
+    100% 100%;
+  background-position:
+    0 var(--er-red-line, 56px),
+    0 var(--er-rule-start, 64px);
+  background-repeat: no-repeat;
+  color: var(--paper-ink);
+  box-shadow:
+    0 1px 0 rgb(255 255 255 / 0.5) inset,
+    0 1px 2px rgb(40 26 10 / 0.12),
+    0 10px 24px -12px rgb(40 26 10 / 0.35);
+}
+.er-paper .er-muted {
+  color: var(--paper-ink-muted);
+}
+.er-stamp {
+  color: var(--stamp-ink);
+  border: 2.5px solid currentColor;
+  border-radius: 6px;
+  transform: rotate(-8deg);
+  mix-blend-mode: multiply;
+  opacity: 0.85;
+}
+
+/* Dark: paper in the page (slip, index card) becomes a warm dark sheet so form controls and text keep contrast.
+   The catalogue's own cards stay cream under the lamp. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .er-paper {
+    --paper: #29251c;
+    --paper-2: #221f17;
+    --paper-ink: var(--gray-12);
+    --paper-ink-muted: var(--gray-11);
+    --paper-rule: rgb(140 170 230 / 0.1);
+    --paper-red: rgb(230 100 90 / 0.4);
+    box-shadow:
+      0 0 0 1px rgb(255 240 210 / 0.06),
+      0 10px 24px -12px rgb(0 0 0 / 0.6);
+  }
+  :root:not([data-theme='light']) .er-stamp {
+    color: var(--green-11);
+    mix-blend-mode: normal;
+  }
+}
+:root[data-theme='dark'] .er-paper {
+  --paper: #29251c;
+  --paper-2: #221f17;
+  --paper-ink: var(--gray-12);
+  --paper-ink-muted: var(--gray-11);
+  --paper-rule: rgb(140 170 230 / 0.1);
+  --paper-red: rgb(230 100 90 / 0.4);
+  box-shadow:
+    0 0 0 1px rgb(255 240 210 / 0.06),
+    0 10px 24px -12px rgb(0 0 0 / 0.6);
+}
+:root[data-theme='dark'] .er-stamp {
+  color: var(--green-11);
+  mix-blend-mode: normal;
+}

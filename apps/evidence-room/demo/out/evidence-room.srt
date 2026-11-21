@@ -1,0 +1,99 @@
+1
+00:00:03,208 --> 00:00:06,512
+Every year-end audit runs on a long list of client
+
+2
+00:00:06,512 --> 00:00:09,618
+requests, and nobody can see all of it at once.
+
+3
+00:00:10,068 --> 00:00:13,828
+Evidence Room turns that list into a card catalogue:
+
+4
+00:00:13,828 --> 00:00:17,298
+one drawer per audit area, one card per request.
+
+5
+00:00:18,426 --> 00:00:21,887
+Red tabs are overdue, paper clips are open queries, and
+
+6
+00:00:21,887 --> 00:00:25,286
+the brass strip fills as the auditor accepts evidence.
+
+7
+00:00:26,094 --> 00:00:28,819
+Switch the lens to ageing, and the same
+
+8
+00:00:28,819 --> 00:00:31,054
+cards show how late each one is.
+
+9
+00:00:31,855 --> 00:00:35,687
+Today ranks what needs attention; this one opens Revenue and
+
+10
+00:00:35,687 --> 00:00:39,135
+lifts out the bad debt provision, seventeen days late.
+
+11
+00:00:39,941 --> 00:00:44,721
+View as auditor, and only the submissions waiting for review stay lit.
+
+12
+00:00:47,153 --> 00:00:50,734
+Sam owns that request. From his Today, the reading
+
+13
+00:00:50,734 --> 00:00:54,243
+desk shows the card, its evidence and its thread.
+
+14
+00:00:54,693 --> 00:00:57,476
+Adding the first evidence moves the card to
+
+15
+00:00:57,476 --> 00:01:00,583
+in progress; submitting sends it to the auditor.
+
+16
+00:01:05,612 --> 00:01:08,946
+As the lead auditor, the returns trolley lists
+
+17
+00:01:08,946 --> 00:01:12,642
+every submission, oldest first, to accept or query.
+
+18
+00:01:13,092 --> 00:01:17,102
+Only auditors get these buttons, and a query needs a real question.
+
+19
+00:01:17,913 --> 00:01:20,195
+Back in the catalogue, the card wears
+
+20
+00:01:20,195 --> 00:01:22,663
+its paper clip until the client answers.
+
+21
+00:01:25,898 --> 00:01:29,068
+On a new request slip, the room shows what was
+
+22
+00:01:29,068 --> 00:01:33,548
+already asked, so the same reconciliation is not requested twice.
+
+23
+00:01:34,357 --> 00:01:39,149
+The shelf list is the pack for the weekly audit meeting:
+
+24
+00:01:39,149 --> 00:01:43,427
+progress and ageing by area, as a CSV or on paper.
+
+25
+00:01:44,235 --> 00:01:48,405
+One room for both sides, and every request where everyone can see it.
